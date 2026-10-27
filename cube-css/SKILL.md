@@ -59,7 +59,7 @@ Override spacing by setting the custom property in context. Never write a compet
 }
 ```
 
-Use composition inside blocks too, e.g. `[ card__content ] [ flow ]`. It is not only for page layout. Flow is near-identical to the Stack layout in Every Layout.
+Use composition inside blocks too, e.g. `card__content flow`. It is not only for page layout. Flow is near-identical to the Stack layout in Every Layout.
 
 ## Layer 2: Utility
 
@@ -142,16 +142,16 @@ If an exception overrides most of the block, make a new block. Reason: the varia
 
 ## Grouping classes
 
-Group classes in the `class` attribute so the layers stay readable. Order: primary block, other blocks, standard utilities, token utilities.
+Order classes in the `class` attribute so the layers stay readable. Order: primary block, other blocks, standard utilities, token utilities.
 
 ```html
 <article
-  class="[ card ] [ section box ] [ bg-base color-primary ]"
+  class="card section box bg-base color-primary"
   data-state="reversed"
 ></article>
 ```
 
-Brackets and pipes (`card | section box | bg-base color-primary`) are both valid. Pick one per project. Consistency beats the choice of delimiter.
+Never add delimiters between groups. No square brackets (`[ card ] [ section box ]`) and no pipes (`card | section box`), in HTML, JSX or any other markup. Use plain space-separated classes and let the order carry the grouping. Reason: delimiters are not class names, add noise, and brackets collide with other tooling such as Tailwind arbitrary values.
 
 ## Bad / Good
 
@@ -168,5 +168,5 @@ Brackets and pipes (`card | section box | bg-base color-primary`) are both valid
 
 1. Run the layer decision tree before writing any selector.
 2. Reuse existing composition and utility classes before adding any.
-3. Match the project's existing choices for element naming and grouping delimiter. If none exist, use descendant naming and brackets.
-4. Group the classes on every element you touch.
+3. Match the project's existing choice for element naming. If none exists, use descendant naming. Order classes by layer with no delimiters.
+4. Order the classes on every element you touch.

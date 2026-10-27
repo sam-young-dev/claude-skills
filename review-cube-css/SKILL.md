@@ -36,12 +36,14 @@ Run every check on every file.
 | Block redundancy | Block re-declares what global, composition or utility already do | Delete the duplicate |
 | Exception form | Modifier class (`--x`, `.is-x`) for a state or variant | `data-*` attribute selector |
 | Exception size | An exception overrides most of the block | Make it a new block |
-| Grouping | Ungrouped classes, wrong order, or mixed delimiters | Block, other blocks, utilities, token utilities; one delimiter per project |
+| Class order | Classes in the wrong order | Block, other blocks, utilities, token utilities |
+| Class delimiters | `[ ]`, `\|` or other delimiters between class groups in HTML, JSX or templates | Remove them: `card section box bg-base` |
 | Naming consistency | Mixed `.block .el` and `.block__el` in one project | Pick one and convert |
 
 ## Rules for the review
 
-- Never flag a choice the methodology leaves open: bracket vs pipe delimiter, descendant vs BEM-style naming. Flag only inconsistency within the project.
+- Never flag a choice the methodology leaves open, such as descendant vs BEM-style naming. Flag only inconsistency within the project.
+- Always flag delimiters (square brackets, pipes) between class groups. Classes are plain and space-separated.
 - Never flag a tool choice. Sass, PostCSS, CSS-in-JS and Tailwind-generated utilities are all valid.
 - Cite file and line for every row.
 - Every Fix must be concrete CSS or HTML, not advice.
