@@ -14,7 +14,7 @@ Agent skills for Claude Code, by Sam Young.
 Personal (all projects):
 
 ```sh
-git clone https://github.com/<your-username>/claude-skills.git
+git clone https://github.com/sam-young-dev/claude-skills.git
 cp -r claude-skills/cube-css claude-skills/review-cube-css ~/.claude/skills/
 ```
 
