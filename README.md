@@ -8,6 +8,7 @@ Agent skills for Claude Code, by Sam Young.
 | --- | --- |
 | [cube-css](cube-css/SKILL.md) | Write CSS with the CUBE CSS methodology (Composition, Utility, Block, Exception) |
 | [review-cube-css](review-cube-css/SKILL.md) | Audit existing CSS and HTML against CUBE CSS and get a findings table |
+| [job-skill](job-skill/SKILL.md) | Search US job boards, tailor a resume and cover letter to each match, and track applications |
 
 ## Install
 
@@ -15,12 +16,12 @@ Personal (all projects):
 
 ```sh
 git clone https://github.com/sam-young-dev/claude-skills.git
-cp -r claude-skills/cube-css claude-skills/review-cube-css ~/.claude/skills/
+cp -r claude-skills/cube-css claude-skills/review-cube-css claude-skills/job-skill ~/.claude/skills/
 ```
 
 Single project: copy the folders into that project's `.claude/skills/` instead.
 
-Invoke with `/cube-css` or `/review-cube-css`, or let Claude pick them up from the task.
+Invoke with `/cube-css`, `/review-cube-css`, or `/job-skill`, or let Claude pick them up from the task.
 
 ## Attribution
 
